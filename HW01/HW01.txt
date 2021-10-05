@@ -1,0 +1,25 @@
+#written using python2.7 (renamed .py to .txt)
+
+#plots x(t) trajectories showing nearly exponential convergence
+# (to -1 or 1) or divergence based on initial x positions 
+ 
+#created 7 plots using x values: -1.1,-0.9,0,0.3,0.9,1.1
+
+
+import matplotlib.pyplot as plt
+
+dx=.001    #small pertubation
+dt=.001    #time step
+x=.999      #initial x value
+t=0        
+while t<1:
+	dxdt=1-x**2  
+	x+= dxdt*dt     #incrimenting x values
+	t+=dt           #incrimenting time values
+	plt.plot(t,x, '--bo')   
+	plt.ylabel("X(t)")
+	plt.xlabel("Time")
+	#plt.semilogy(t,x,'--bo')
+	#print(t,x)
+plt.show()
+

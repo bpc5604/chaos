@@ -1,0 +1,15 @@
+#written uing python2.7 (renamed .py to .txt)
+
+#plots the exponential solution as a straight line with a slope
+# of 2  
+#created 2 semilog plots 
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+y=np.linspace(0,50) 
+x = np.exp(2*y)
+plt.semilogy(y,x,'b')
+plt.show()
+
